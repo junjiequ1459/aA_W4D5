@@ -37,4 +37,17 @@ def sub_sum_v2(arr)
 end
 
 list = [5, 3, -7]
-p sub_sum(list)
+
+def first_anagram?(str1)
+end
+
+# all_ans = [str1]
+# temp = str1
+# (str1.length - 2).times do
+#   temp = temp[0] + temp[2..-1] + temp[1]                                          #str1[j..-1] + str1[j]
+#   all_ans << temp
+# end
+# all_ans
+# end
+
+p first_anagram?("cat")
