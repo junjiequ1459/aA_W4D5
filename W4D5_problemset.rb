@@ -38,16 +38,9 @@ end
 
 list = [5, 3, -7]
 
-def first_anagram?(str1)
+def first_anagram?(str1, str2)
+  str1_perm = str1.split("").permutation.to_a
+  str2_split = str2.split("")
+
+  str1_perm.include? str2_split
 end
-
-# all_ans = [str1]
-# temp = str1
-# (str1.length - 2).times do
-#   temp = temp[0] + temp[2..-1] + temp[1]                                          #str1[j..-1] + str1[j]
-#   all_ans << temp
-# end
-# all_ans
-# end
-
-p first_anagram?("cat")
