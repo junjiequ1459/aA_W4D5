@@ -44,3 +44,30 @@ def first_anagram?(str1, str2)
 
   str1_perm.include? str2_split
 end
+
+def second_anagram?(str1, str2)
+    split_arr = str2.split("")
+    str1.each_char do |char|
+        if split_arr.include?(char)
+            split_arr.delete(char)
+        else
+            return false
+        end
+    end
+    split_arr == []
+end
+
+# p second_anagram?("cat", "saw")
+# p second_anagram?("elvis", "lives")
+# p second_anagram?("cat", "tac")
+
+def third_anagram?(str1, str2)
+    sorted_a = str1.chars.sort 
+    sorted_b = str2.chars.sort
+    sorted_a == sorted_b
+end
+
+# p third_anagram?("elvis", "lives")
+# p third_anagram?("cat", "tac")
+# p third_anagram?("cat", "saw")
+
